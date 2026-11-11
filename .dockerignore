@@ -1,0 +1,5 @@
+.git
+.railway
+node_modules
+*.md
+scripts
