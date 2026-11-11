@@ -53,7 +53,7 @@ For frameworks, deploy the built static output, not server-rendered code. A back
 - Real files and directory indexes are served without an SPA catch-all.
 - `/food.html` returns a 301 redirect to `/menu.html` as a migration example.
 - Unknown paths return the custom page with a true 404 status.
-- Conservative revalidation headers prevent long-lived stale menus and unversioned assets.
+- HTML revalidates on each request; unversioned assets have a short 60-second cache lifetime.
 - JSON access logs go to stdout.
 - `PORT` defaults to 8080; `SITE_ROOT` defaults to `public` locally and `/srv/public` in the container.
 

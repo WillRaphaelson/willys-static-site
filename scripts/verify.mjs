@@ -28,5 +28,5 @@ for (const path of ['/missing-page', '/.env', '/Caddyfile', '/assets/missing.css
 }
 const asset = await fetch(new URL('/assets/rigatoni.svg', base));
 assert.match(asset.headers.get('content-type'), /image\/svg\+xml/);
-assert.match(asset.headers.get('cache-control'), /must-revalidate/);
+assert.match(asset.headers.get('cache-control'), /max-age=60/);
 console.log('PASS SVG content type and conservative cache policy');

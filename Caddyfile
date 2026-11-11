@@ -6,7 +6,9 @@
 :{$PORT:8080} {
 	root * {$SITE_ROOT:public}
 	encode zstd gzip
-	header Cache-Control "public, max-age=0, must-revalidate"
+	@pages not path /assets/*
+	header @pages Cache-Control "public, max-age=0, must-revalidate"
+	header /assets/* Cache-Control "public, max-age=60"
 	header X-Content-Type-Options "nosniff"
 	redir /food.html /menu.html 301
 	file_server
