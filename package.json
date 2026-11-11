@@ -1,0 +1,1 @@
+{"name":"willys-static-site","version":"1.0.0","private":true,"type":"module","scripts":{"check":"tsc --noEmit","verify":"node scripts/verify.mjs"},"devDependencies":{"railway":"3.16.0","typescript":"5.8.3"}}
